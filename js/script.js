@@ -14,7 +14,7 @@ $(function() {
 
 			$.ajax({
 				type: 'POST',
-				url: 'http://silwiaimateusz.unicloud.pl/dj-mailer.php',
+				url: 'https://script.google.com/macros/s/AKfycbz2SuwKWINcYWtWtMhRx3NJK9kmn-kIk7dSySVeI6wZ246vkUw/exec',
 				data: {
 					song: songChoice,
 				},
@@ -42,28 +42,30 @@ $(function() {
 		var rsvpAttendance = $('#rsvp-attendance').val();
 		
 		if (rsvpName <= 1) {
-			alert('Please enter the name/names of who will be attending.');
+			alert('Proszę wpisać imię i nazwisko.');
 		} else {
 
 			$('#rsvp-form').hide();
 			$('#rsvp-loading').fadeIn();
 
+
 			$.ajax({
 				type: 'POST',
-				url: 'http://silwiaimateusz.unicloud.pl/mailer.php',
+				url: 'https://script.google.com/macros/s/AKfycbxIYvoX0xNAnv7jmojCN1-lheNk9_I_zAuXsJ0psFj9ndpewwB7/exec',
 				data: {
 					name: rsvpName,
 					attendance: rsvpAttendance,
 				},
 				success: function(data) {
-					$('#rsvp-result-message').html('<span>Thank you, your RSVP has been recieved.</span>');
+					$('#rsvp-result-message').html('<span>Dziękuje za wypełnienie zgłoszenia.</span>');
 					//@todo: store a local storage token to note they have submitted a response
 					
 				},
 				error:function(e){
-					$('#rsvp-result-message').html('<span>Sorry there was an issue sending your RSVP, <a href="http://silwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
+					$('#rsvp-result-message').html('<span>Przepraszam ale nastąpił problem podczas wysyłania zgłoszenia, <a href="http://silwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
 				}
 			});
+
 
 			setTimeout(function () {
 				$('#rsvp-loading').hide();
