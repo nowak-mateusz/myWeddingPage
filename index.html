@@ -1,8 +1,6 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="pl"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="pl"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="pl"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="pl"> <!--<![endif]-->
+<!DOCTYPE html>
+
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,19 +13,23 @@
 	
 	<!-- FONT -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<!-- CSS -->
+	
+   <!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/animation.css">
 
-
-	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+   <!-- SCRIPTS -->
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" defer src="js/plugins.js"></script>
+	<script type="text/javascript" defer src="js/script.js"></script>
 
 </head>
 
-<body>
+<body onload="mapaStart()">
 	<div id="main" class="container">
 		<!-- Navigation --> 
 		<header>
@@ -41,27 +43,11 @@
 							<span>Prezenty i wybór muzyki</span>
 						</a>
 					</li>
-<!--
-					<li class="span2">
-						<a  title="" href="#intinerary">
-							<span class="title">Plan uroczystości</span>
-							<span>Czego możecie się spodziewać</span>
-						</a>
-					</li>
--->
 					<li class="logo span4">
 						<a title="Ślub Sylwii i Mateusza" href="#">
 							Ślub Sylwii i Mateusza
 						</a>
 					</li>
-<!--
-					<li class="span2">
-						<a title="" href="#hotels">
-							<span class="title">Nocleg</span>
-							<span>Noclegi w pobliżu</span>
-						</a>
-					</li>
--->
 					<li class="span2">
 						<a title="" href="#location">
 							<span class="title">Miejsce</span>
@@ -138,222 +124,6 @@
 		</section>
 
 		<div class="clear"><hr /></div>
-<!--
-		<section class="row">
-			<a id="intinerary"></a>
-			<div class="span24 itinerary">
-				<h2>The Day</h2>
-
-			<!-- Top of timeline ->
-
-			<div class="timeline-end row">
-
-				<div class="span12">
-					<h4>Morning</h4>
-				</div>
-
-			</div>	
-			
-			<div id="timeline-wrap">
-			
-				<div class="timeline-row-first timeline-row timeline-row-right">
-
-					<div class="timeline-entry timeline-entry-right">
-						<h4>Church service</h4>
-						<hr/>
-						<div class="timeline-chruch timeline-icon">
-							<p>Day guests to arrive at the church for 1:30pm. The service will commence at 2:00pm shrarp, unless Jacqui decides to make Phil sweat!</p>
-							<p class="note"> - 1:30pm</p>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-
-				</div>
-						
-				<!-- Entry in time line, on left ->
-				<div class="timeline-row timeline-row-left">
-
-					<div class="timeline-entry timeline-entry-left">
-						<h4>I DO</h4>
-						<hr/>
-						<div class="timeline-rings timeline-icon">
-							<p>The important bit... we are to be married by Revd. Canon Steve Coneys.</p>
-							<p class="note">- 2:00pm</p>
-						</div>
-					</div>
-
-					<div class="clearfix"></div>
-
-				</div>
-
-				<div class="timeline-row timeline-row-right">
-
-					<div class="timeline-entry timeline-entry-right">
-						<h4>Wedding Breakfast</h4>
-						<hr/>
-						<div class="timeline-meal timeline-icon">
-							<p>A yummy buffet of food for everyone to tuck into, followed by some wonderful speeches (we hope - no pressure!)</p>
-							<p class="note">- 4:00pm</p>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-
-				</div>
-						
-				<!-- Entry in time line, on left ->
-				<div class="timeline-row timeline-row-left">
-
-					<div class="timeline-entry timeline-entry-left">
-						<h4>Evening guests arrive</h4>
-						<hr/>
-						<div class="timeline-photography timeline-icon">
-							<p>Ready to party the night away. There will be music... and dancing.
-							 IT'S A CASH BAR ONLY!!!
-							</p>
-							<p class="note">- 7:00pm</p>
-						</div>
-					</div>
-
-					<div class="clearfix"></div>
-
-				</div>
-				
-				<!-- Entry in time line, on right ->
-				<div class="timeline-row timeline-row-right">
-
-					<div class="timeline-entry timeline-entry-right">
-						<h4>Cutting of the cake</h4>
-						<hr/>
-						<div class="timeline-cake timeline-icon">
-							<p>Ready so we can eat more food and drink more wine.</p>
-							<p class="note">- 7:30pm</p>
-						</div>
-					</div>
-
-					<div class="clearfix"></div>
-
-				</div>
-
-				<!-- Entry in time line, on left ->
-				<div class="timeline-row timeline-row-left">
-
-					<div class="timeline-entry timeline-entry-left">
-						<h4>First Dance</h4>
-						<hr/>
-						<div class="timeline-dj timeline-icon">
-							<p>We have a real treat in store for all you Sade fans...</p>
-							<p class="note">- 7:45pm</p>
-						</div>
-					</div>
-
-					<div class="clearfix"></div>
-
-				</div>
-
-				<!-- Entry in time line, on right ->
-				<div class="timeline-row timeline-row-right">
-
-					<div class="timeline-entry timeline-entry-right">
-						<h4>Say Farewell</h4>
-						<hr/>
-						<div class="timeline-disturb timeline-icon">
-							<p>... to the bride and groom, but you still have time for one last boogie.</p>
-							<p class="note">- 10:30pm</p>
-						</div>
-					</div>
-
-					<div class="clearfix"></div>
-
-				</div>
-
-				<!-- Entry in time line, on left ->
-				<div class="timeline-row timeline-row-left">
-
-					<div class="timeline-entry timeline-entry-left">
-						<h4>Carriages</h4>
-						<hr/>
-						<div class="timeline-car timeline-icon">
-							<p>A wonderful day, thanks for coming. The disco will finish at 11, all guests to leave by 11:30pm. Please respect the neighbours and leave quietly.</p>
-							<p class="note">- 11:30pm</p>
-						</div>
-					</div>
-					
-					<div class="clearfix"></div>
-				
-				</div>
-
-			</div>
-			
-			<!-- Bottom of timeline ->
-			<div class="timeline-end row">
-
-				<div class="span12">
-					<h4>Evening</h4>
-				</div>
-
-			</div>
-
-		</section>
-
-		<div class="clear"><hr /></div>
-
-		<section>
-			<a id="hotels"></a>
-			<div class="row">
-				<div class="span12 hotels">
-					<h2>Hotels &amp; accomodation</h2>
-					<p>There are plenty of hotels and B&amp;Bs around Saltwood and Hythe to choose from, but we have picked a selection below for you to take a look at.</p>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="span6">
-					<div class="hotel-odd">
-						<h3>Castle Hotel</h3>
-						<p><strong>Address: </strong> The Green, Hythe, Kent CT21 4AJ</p>
-						<p><strong>Phone: </strong>01303 266311</p>
-						<p><strong>Website: </strong><a target="_blank" href="http://www.castlehotel-saltwood.co.uk/">www.castlehotel.co.uk/</a></p>
-						<p><strong>Distance from venue: </strong>250 ft </p>	
-					</div>
-				</div>
-
-				<div class="span6">
-					<div class="hotel-even">
-						<h3>Hythe Imperial</h3>
-						<p><strong>2 night minimum stay*</strong></p>
-						<p><strong>Address: </strong> Princes Parade, Hythe, Kent CT21 6AE</p>
-						<p><strong>Phone: </strong>01303 267441</p>
-						<p><strong>Website: </strong><a target="_blank" href="http://www.mercure.com/gb/hotel-6862-mercure-hythe-imperial-hotel-spa/index.shtml">www.hytheimperail.com/</a></p>
-						<p><strong>Distance from venue: </strong>1.6 miles</p>
-					</div>	
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="span6">
-					<div class="hotel-even">
-						<h3>The Old Post Office Guest House</h3>
-						<p><strong>Address: </strong> 5 High Street, Hythe, Kent CT21 5AB</p>
-						<p><strong>Phone: </strong>01303 230828</p>
-						<p><strong>Website: </strong><a target="_blank" href="http://www.oldpostofficeguesthousehythe.co.uk/">www.poguesthouse.co.uk/</a></p>
-						<p><strong>Distance from venue: </strong>1 miles</p>
-					</div>
-				</div>
-
-				<div class="span6">
-					<div class="hotel-odd">
-						<h3>Holiday Inn Express Folkestone</h3>
-						<p><strong>Address: </strong> Cheriton Park, Cheriton High Street, Folkestone CT18 8AN</p>
-						<p><strong>Phone: </strong>01303 298450</p>
-						<p><strong>Website: </strong><a target="_blank" href="http://www.ihg.com/holidayinnexpress/hotels/gb/en/folkestone/lyxfx/hoteldetail?cm_mmc=GoogleMaps-_-ex-_-GBEN-_-lyxfx">www.ihg.com/</a></p>
-						<p><strong>Distance from venue: </strong>3.2 miles</p>
-					</div>
-				</div>
-			</div>  
-		</section>
-
-		<div class="clear"><hr /></div>
--->
 		<section class="row">
 			<a id="location"></a>
 			<div class="span12 location">
@@ -380,16 +150,6 @@
 				</div>
 			</div>
 		</div>
-<!--
-		<div class="row">
-			<div class="span12  card">
-				<div class="parking">
-					<h3>Parking</h3>
-					<p>Limited parking is available at the church, with no on-site parking at the reception venue. It is a small village so you can park anywhere near, however please be respectful to the neighbours. Thanks.</p>
-				</div>
-			</div>
-		</div>
--->
 		</section>
 
 		<div class="clear"><hr /></div>
@@ -397,15 +157,14 @@
 			<div class="footnote"></div>
 		</section>
 	</div>
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<!--
+	
+	
 
 	<script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA5h0paaq2zcWGc8znlXZhXRQOSiUxVM-SGYUDi2BtB3xcYRUtqBQ9ecKZgmxyTZhXi4-tFRQMy63Udw"></script>
 	<script type="text/javascript" src="js/libs/jquery.gmap-1.1.0-min.js"></script>
 
-	<script defer src="js/plugins.js"></script>
-	<script defer src="js/script.js"></script>
 
+-->
 </body>
 </html>
