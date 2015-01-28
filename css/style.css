@@ -71,7 +71,7 @@ h3 {
 /* Header */
 header {
 	margin-top:10px;
-	height:160px;
+	height:290px;
 }
 
 	/** Primay Naviagtion **/
@@ -476,4 +476,22 @@ header {
 /* Large desktop */
 @media (min-width: 1200px) {
 	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {margin:0px 70px;}
+}
+
+#slideshow {
+    display:block; 
+    position: relative; 
+    width: 100%; 
+}
+#slideshow > div > img{
+    display:block;
+    width:100%;
+    max-width:100%;
+    position:absolute;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+}
+#slideshow > div { 
+ position:relative;
 }
