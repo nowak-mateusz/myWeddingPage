@@ -59,7 +59,7 @@ h1 {
 
 h2 {
 	font-size: 40px;
-	line-height: 35px
+	line-height: 35px;
 }
 
 h3 {
@@ -158,6 +158,11 @@ header {
 		text-align: center;
 		width: 100%;
 	}
+   
+   .container .introduction h2{
+      color: red
+   }
+
 	.rsvp-result-message,
 	.song-result-message {
 		display: none;
@@ -474,7 +479,7 @@ header {
 /** Landscape phone to portrait tablet **/
 @media screen and (max-width: 767px) {
 	/* Header & Nav */
-	header { margin:0 auto; width:200px; height: 200px;}
+	header { margin:0 auto; width:200px; height: 400px;}
 	nav { width:200px; height:610px;margin:0 auto;}
 	nav ul.primary { width:200px; margin:190px 0px 0px 0px;}
 	nav li { width:200px;  padding-top:5px; width:94%;}
