@@ -71,7 +71,7 @@ h3 {
 /* Header */
 header {
 	margin-top:10px;
-	height:290px;
+	height:280px;
 }
 
 	/** Primay Naviagtion **/
@@ -474,7 +474,7 @@ header {
 /** Landscape phone to portrait tablet **/
 @media screen and (max-width: 767px) {
 	/* Header & Nav */
-	header { margin:0 auto; width:200px; height: 400px;}
+	header { margin:0 auto; width:200px; height: 200px;}
 	nav { width:200px; height:610px;margin:0 auto;}
 	nav ul.primary { width:200px; margin:190px 0px 0px 0px;}
 	nav li { width:200px;  padding-top:5px; width:94%;}
@@ -484,20 +484,22 @@ header {
    #slideshow {visibility: hidden;}
 }
 
-@media (min-width: 768px) and (min-width: 852px) {
-	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {visibility:visible;margin:0px 35px;}
-   #slideshow {visibility: hidden;}
-}
-
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {visibility:visible;margin:0px 10px;}
-   #slideshow {visibility: hidden;}
+   header { height: 160px;}
+	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {margin:0px 10px;}
+   #slideshow {margin:0px 25px;}
+
+}
+
+@media (min-width: 979px) and (max-width: 1199px) {
+   header { height: 220px;}
+	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {margin:0px 10px;}
+   #slideshow {margin:0px 10px;}
 }
  
 /* Large desktop */
 @media (min-width: 1200px) {
-	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {visibility:visible;margin:0px 70px;}
-   #slideshow {visibility: hidden;}
+	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {margin:0px 70px;}
 }
 
