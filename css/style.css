@@ -452,51 +452,6 @@ header {
 	background: url("../img/icon-car.png") no-repeat;
 }
 
-/* Media Queries */
-/** Landscape phone to portrait tablet **/
-@media screen and (max-width: 767px) {
-	/* Header & Nav */
-	header { margin:0 auto; width:200px; height: 400px;}
-	nav { width:200px; height:610px;margin:0 auto;}
-	nav ul.primary { width:200px; margin:190px 0px 0px 0px;}
-	nav li { width:200px;  padding-top:5px; width:94%;}
-	nav li a { width:200px;  background:url("../img/shutter.png") repeat scroll 0 0 transparent;height:80px;width:180px;padding:20px;}
-	nav .logo { position:absolute;top:50px;padding-top:0px;}
-	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {background:url('../img/logo.png') top left no-repeat;
-			    text-indent:-9999px;
-				color:#1b1b1b;
-				width:221px;
-				height:123px;display:block;width:182px;}
-   #slideshow {visibility: hidden;})
-}
-
-@media (min-width: 768px) and (min-width: 852px) {
-	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {background:url('../img/logo.png') top left no-repeat;
-			    text-indent:-9999px;
-				color:#1b1b1b;
-				width:221px;
-				height:123px;margin:0px 35px;}
-}
-
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {background:url('../img/logo.png') top left no-repeat;
-			    text-indent:-9999px;
-				color:#1b1b1b;
-				width:221px;
-				height:123px;margin:0px 10px;}
-}
- 
-/* Large desktop */
-@media (min-width: 1200px) {
-	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {background:url('../img/logo.png') top left no-repeat;
-			    text-indent:-9999px;
-				color:#1b1b1b;
-				width:221px;
-				height:123px;
-margin:0px 70px;}
-}
-
 #slideshow {
     display:block; 
     position: relative; 
@@ -514,3 +469,35 @@ margin:0px 70px;}
 #slideshow > div { 
  position:relative;
 }
+
+/* Media Queries */
+/** Landscape phone to portrait tablet **/
+@media screen and (max-width: 767px) {
+	/* Header & Nav */
+	header { margin:0 auto; width:200px; height: 400px;}
+	nav { width:200px; height:610px;margin:0 auto;}
+	nav ul.primary { width:200px; margin:190px 0px 0px 0px;}
+	nav li { width:200px;  padding-top:5px; width:94%;}
+	nav li a { width:200px;  background:url("../img/shutter.png") repeat scroll 0 0 transparent;height:80px;width:180px;padding:20px;}
+	nav .logo { position:absolute;top:50px;padding-top:0px;}
+	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {visibility:visible;display:block;width:182px;}
+   #slideshow {visibility: hidden;}
+}
+
+@media (min-width: 768px) and (min-width: 852px) {
+	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {visibility:visible;margin:0px 35px;}
+   #slideshow {visibility: hidden;}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {visibility:visible;margin:0px 10px;}
+   #slideshow {visibility: hidden;}
+}
+ 
+/* Large desktop */
+@media (min-width: 1200px) {
+	nav .logo a, nav .logo a:hover, nav .logo a:link, nav .logo a:visited  {visibility:visible;margin:0px 70px;}
+   #slideshow {visibility: hidden;}
+}
+
