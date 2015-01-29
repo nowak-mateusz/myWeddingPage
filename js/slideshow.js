@@ -1,6 +1,6 @@
+$("#slideshow > div:gt(0)").hide();
 
 $(window).load(function(){
-$("#slideshow > div:gt(0)").hide();
 
 setInterval(function() { 
   $('#slideshow > div:first')

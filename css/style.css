@@ -180,7 +180,22 @@ header {
          text-transform: none;
 			
    }
-
+   
+   .pigeon_l {
+			background: url(../img/pigeon_l.png) no-repeat left;
+			padding: 0px;
+			height: 112px;
+         width: 80px;
+         float: left;	
+		}
+   .pigeon_r {
+			background: url(../img/pigeon_r.png) no-repeat right bottom;
+			padding: 0px;
+			height: 110px;
+         width: 80px;
+         float: right;	
+		}
+   
 	.rsvp-result-message,
 	.song-result-message {
 		display: none;
