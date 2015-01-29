@@ -1,7 +1,5 @@
 $("#slideshow > div:gt(0)").hide();
 
-$(window).load(function(){
-
 setInterval(function() { 
   $('#slideshow > div:first')
     .fadeOut(1000)
@@ -10,4 +8,4 @@ setInterval(function() {
     .end()
     .appendTo('#slideshow');
 },  3000);
-}); 
+
