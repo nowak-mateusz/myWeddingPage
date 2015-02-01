@@ -1,9 +1,5 @@
 <?php
 
-   openlog("mailer_log", LOG_NDELAY, LOG_LOCAL2);
-   openlog("myapp", LOG_NDELAY, LOG_LOCAL2);
-2	syslog(LOG_ERR, "Testing php and syslog");
-
 	// Assign contact info
 	$name = stripcslashes($_POST['name']);
 	$mail = stripcslashes($_POST['mail']);
@@ -33,9 +29,15 @@
 	// Send and check the message status
 	$response = (mail($to, $subject, $contactMessage, $headers) ) ? "success" : "failure" ;
 	$output = json_encode(array("response" => $response));
-   syslog(LOG_INFO, "Send mail: $response, $name, $mail, \"$text\"");
-	header('content-type: application/json; charset=utf-8');
-   closelog();
+
+
+   // Backup to txt file:
+   $myFile = "contactMsg.txt";
+   $fh = fopen($myFile, 'a') or die("can't open file");
+   $stringData = "Send mail: $response, $name, $mail, \"$text\"\r\n";
+   fwrite($fh, $stringData);
+   fclose($fh);
+
 	echo($output);
    
 ?>

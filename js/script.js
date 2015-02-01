@@ -114,6 +114,7 @@ $(function() {
 					
 				},
 				error:function(e){
+               $('#contact-loading').hide();
 					$('#contact-result-message').html('<span>Przepraszawy, ale nastąpił problem podczas wysyłania wiadomości, <a href="http://sylwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
 				}
 			});
