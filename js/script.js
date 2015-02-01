@@ -22,7 +22,7 @@ $(function() {
 					$('#song-result-message').html('<span>Dziękuje</span>');
 				},
 				error:function(e) {
-					$('#song-result-message').html('<p>Przepraszam ale nastąpił problem podczas wysyłania piosenki, <a href="http://sylwiaimateusz.unicloud.pl/"> spróbuj ponownie</a>.</p>');
+					$('#song-result-message').html('<p>Przepraszamy, ale nastąpił problem podczas wysyłania piosenki, <a href="http://sylwiaimateusz.unicloud.pl/"> spróbuj ponownie</a>.</p>');
 				}
 			});
 
@@ -57,12 +57,12 @@ $(function() {
 					attendance: rsvpAttendance,
 				},
 				success: function(data) {
-					$('#rsvp-result-message').html('<span>Dziękuje za wypełnienie zgłoszenia.</span>');
+					$('#rsvp-result-message').html('<span>Dziękujemy za wypełnienie zgłoszenia.</span>');
 					//@todo: store a local storage token to note they have submitted a response
 					
 				},
 				error:function(e){
-					$('#rsvp-result-message').html('<span>Przepraszam ale nastąpił problem podczas wysyłania zgłoszenia, <a href="http://sylwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
+					$('#rsvp-result-message').html('<span>Przepraszamy, ale nastąpił problem podczas wysyłania zgłoszenia, <a href="http://sylwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
 				}
 			});
 
@@ -107,12 +107,12 @@ $(function() {
                text: contactText,
 				},
 				success: function(data) {
-					$('#contact-result-message').html('<span>Dziękuje za wysłanie wiadomości.</span>');
+					$('#contact-result-message').html('<span>Dziękujemy za wysłanie wiadomości.</span>');
 					//@todo: store a local storage token to note they have submitted a response
 					
 				},
 				error:function(e){
-					$('#contact-result-message').html('<span>Przepraszam ale nastąpił problem podczas wysyłania wiadomości, <a href="http://sylwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
+					$('#contact-result-message').html('<span>Przepraszawy, ale nastąpił problem podczas wysyłania wiadomości, <a href="http://sylwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
 				}
 			});
 

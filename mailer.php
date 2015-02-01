@@ -21,6 +21,7 @@
 	$contactMessage =
 	"<div>   $text
     <br />
+    <br />
 	<strong>Sent via:</strong> $_SERVER[HTTP_HOST]</p>
 	</div>";
 
