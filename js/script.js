@@ -22,7 +22,7 @@ $(function() {
 					$('#song-result-message').html('<span>Dziękuje</span>');
 				},
 				error:function(e) {
-					$('#song-result-message').html('<p>Przepraszam ale nastąpił problem podczas wysyłania piosenki, <a href="http://silwiaimateusz.unicloud.pl/"> spróbuj ponownie</a>.</p>');
+					$('#song-result-message').html('<p>Przepraszam ale nastąpił problem podczas wysyłania piosenki, <a href="http://sylwiaimateusz.unicloud.pl/"> spróbuj ponownie</a>.</p>');
 				}
 			});
 
@@ -62,7 +62,7 @@ $(function() {
 					
 				},
 				error:function(e){
-					$('#rsvp-result-message').html('<span>Przepraszam ale nastąpił problem podczas wysyłania zgłoszenia, <a href="http://silwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
+					$('#rsvp-result-message').html('<span>Przepraszam ale nastąpił problem podczas wysyłania zgłoszenia, <a href="http://sylwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
 				}
 			});
 
@@ -70,6 +70,56 @@ $(function() {
 			setTimeout(function () {
 				$('#rsvp-loading').hide();
 				$('.rsvp-result-message').fadeIn();
+			}, 3000);
+		}
+	});
+
+// Contact form
+	$('#contact-form').submit(function(event) {
+		event.preventDefault();
+		// check the form field was entered
+		var contactName = $('#contact-name').val();
+		var contactMail = $('#contact-mail').val();
+      var contactText = $('#contact-text').val();
+
+		if (contactName <= 1) {
+			alert('Proszę wpisać imię i nazwisko.');
+		} 
+      else if(contactMail <=1 )
+      {
+         alert('Proszę wpisać adres e-mail.');
+      }
+      else if(contactText <=1)
+      {
+         alert('Proszę wpisać wiadomość.');
+      }
+      else {
+
+			$('#contact-form').hide();
+			$('#contact-loading').fadeIn();
+
+			$.ajax({
+				type: 'POST',
+				url: 'mailer.php',
+				data: {
+					name: contactName,
+					mail: contactMail,
+               text: contactText,
+				},
+				success: function(data) {
+					$('#contact-result-message').html('<span>Dziękuje za wysłanie wiadomości.</span>');
+					//@todo: store a local storage token to note they have submitted a response
+					
+				},
+				error:function(e){
+					$('#contact-result-message').html('<span>Przepraszam ale nastąpił problem podczas wysyłania wiadomości, <a href="http://sylwiaimateusz.unicloud.pl/">spróbuj ponownie.</a></span>');
+				}
+			});
+
+
+			setTimeout(function () {
+				$('#contact-loading').hide();
+				$('.contact-result-message').fadeIn();
 			}, 3000);
 		}
 	});
@@ -96,3 +146,4 @@ $(function() {
 
 
 });
+

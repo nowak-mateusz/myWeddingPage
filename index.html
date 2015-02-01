@@ -38,12 +38,16 @@
 		<header>
 			<nav>
 				<ul class="primary row">
-               <li class="span2">
-               </li>
 					<li class="span2">
 						<a title="" href="#rsvp">
 							<span class="title">Potwierdzenie przybycia</span>
 							<span>Prezenty i wybór muzyki</span>
+						</a>
+					</li>
+               <li class="span2">
+						<a title="" href="#location">
+							<span class="title">Miejsce</span>
+							<span>Kościół i sala weselna</span>
 						</a>
 					</li>
 					<li class="logo span4">
@@ -86,16 +90,16 @@
                      </div>
                   </div>					
 					</li>
-					<li class="span2">
-						<a title="" href="#location">
-							<span class="title">Miejsce</span>
-							<span>Kościół i sala weselna</span>
-						</a>
-					</li>
                <li class="span2">
 						<a title="" href="#hotels">
 							<span class="title">Nocleg</span>
 							<span>Proponowane miejsca noclegowe</span>
+						</a>
+					</li>
+               <li class="span2">
+						<a title="" href="#hotels">
+							<span class="title">Kontakt</span>
+							<span>Pytania, wątpliwośći</span>
 						</a>
 					</li>
 				</ul>
@@ -212,23 +216,42 @@
 		<section>
 			<a id="hotels"></a>
 			<div class="row">
-				<div class="span12 hotels">
+				<div class="span6 hotels">
 					<h2>Nocleg</h2>
-					<p>Dla Gości Weselnych istnieje możliwość zarezerwowania noclegu.</p>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="span6">
-					<div class="hotel-odd">
+					<p>Dla Gości Weselnych istnieje możliwość zarezerwowania noclegu we własnym zakresie.</p>
+               <div class="hotel-odd">
 						<h3>Hotel i Restauracja Melodia</h3>
- <br />
+                  <br />
 						<p><strong>Adres: </strong> Lipowa 30, 64-320 Buk</p>
 						<p><strong>Telefon: </strong>061 8140 899, 508 258 138</p>
 						<p><strong>WWW: </strong><a target="_blank" href="http://www.melodia-buk.pl">http://www.melodia-buk.pl</a></p>
 					</div>
 				</div>
+				<div class="span6 hotels">
+					<h2>Kontakt</h2>
+					<p>Chętnie udzielimy pomocy w przypadku wszelkich pytań dotyczących naszej uroczystości.</p>
+               <div class="rsvp " style="min-height: 275px;">
+					<div class="validation-message" id="contact-validation"></div>
+					<div class="contact-result-message" id="contact-result-message"></div>
+					<div id="rsvp-loading" class="spinner">
+						<div class="bounce1"></div>
+						<div class="bounce2"></div>
+						<div class="bounce3"></div>
+					</div>
+	                <form name="" id="contact-form" method="get" action="dest">
+	                    Imię i nazwisko:  <br /><input type="text" class="text-field" name="contact-name" id="contact-name" placeholder="np. Adam Kowalski" /><br />
+	                    email: <br /> <input type="text" class="text-field" name="contact-mail" id="contact-mail" placeholder="np. adam@kowalski.pl" /> <br />
+                       Wiadomość: <br />
+                      <textarea style="width:300px;" rows="3" cols="120" name="contact-text" id="contact-text">
+</textarea> 
+	                 <br />
 
+	                    <input type="submit" class="btn ladda-button" data-color="purple" value="Wyślij" />
+
+	                </form>  					
+				</div>
+					</div>
+				</div>
 			</div>
 		</section>
 

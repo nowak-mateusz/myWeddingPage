@@ -197,7 +197,8 @@ header {
 		}
    
 	.rsvp-result-message,
-	.song-result-message {
+	.song-result-message,
+   .contact-result-message, {
 		display: none;
 	}
 	.validation-message {
@@ -335,8 +336,8 @@ header {
 	}
 
 	.hotel-odd {
-		background: url(../img/bg-hotel-alt.png) no-repeat bottom right;
-		background-color: #F28771;
+		background: url(../img/bg-hotel-alt2.png) no-repeat bottom right;
+		background-color: rgb(163,73,164);
 	}
 	.hotel-even {
 		background: url(../img/bg-hotel.png) no-repeat bottom right;
