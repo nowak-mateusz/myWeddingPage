@@ -19,7 +19,7 @@ $(function() {
 					song: songChoice,
 				},
 				success: function(data) {
-					$('#song-result-message').html('<span>Dziękuje</span>');
+					$('#song-result-message').html('<span>Dziękujemy</span>');
 				},
 				error:function(e) {
 					$('#song-result-message').html('<p>Przepraszamy, ale nastąpił problem podczas wysyłania piosenki, <a href="http://sylwiaimateusz.unicloud.pl/"> spróbuj ponownie</a>.</p>');
@@ -57,6 +57,7 @@ $(function() {
 					attendance: rsvpAttendance,
 				},
 				success: function(data) {
+               $('#rsvp-loading').hide();
 					$('#rsvp-result-message').html('<span>Dziękujemy za wypełnienie zgłoszenia.</span>');
 					//@todo: store a local storage token to note they have submitted a response
 					
@@ -107,6 +108,7 @@ $(function() {
                text: contactText,
 				},
 				success: function(data) {
+               $('#contact-loading').hide();
 					$('#contact-result-message').html('<span>Dziękujemy za wysłanie wiadomości.</span>');
 					//@todo: store a local storage token to note they have submitted a response
 					
